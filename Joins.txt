@@ -1,0 +1,12 @@
+9. Write a query to list all books along with their author's name.
+
+use assignment;
+Select B.Title, A.Name from Books as B
+join Authors as A on A.AuthorID = B.AuthorID;
+
+10. Display all orders with the customer name and book title included.
+
+use assignment;
+Select C.Name as customer_name, B.Title as book_title, O.OrderID, O.OrderDate, O.Quantity, O.TotalPrice from Orders as O
+join Customers as C on C.CustomerID = O.CustomerID
+join Books as B on B.BookID = O.BookID;

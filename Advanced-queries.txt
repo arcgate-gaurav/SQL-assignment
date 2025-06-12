@@ -1,0 +1,22 @@
+16. Write a query to list all books that have been ordered more than once.
+
+SELECT B.BookID, B.Title, COUNT(O.BookID) AS OrderCount
+FROM Books B
+JOIN Orders O ON B.BookID = O.BookID
+GROUP BY B.BookID, B.Title
+HAVING COUNT(O.BookID) > 1;
+
+
+17. Identify the top-selling book based on the quantity sold.
+
+use assignment;
+
+Select Title from assignment.Books 
+
+join Orders on Orders.BookID = Books.BookID
+
+Where Books.BookID = (Select BookID from Orders group by BookID order by Sum(Quantity) desc limit 1)
+
+18. Calculate the total stock value for each book (price * stock).
+
+Select price * stock as total_stock, Title from Books

@@ -1,0 +1,10 @@
+
+14. Retrieve the names of authors born before 1950.
+
+USE assignment;
+Select Name from Authors where BirthYear < 1950
+
+15. Find all customers from the 'United Kingdom.'
+
+USE assignment;
+Select * from Customers where Country = 'United Kingdom'
