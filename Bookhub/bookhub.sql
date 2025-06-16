@@ -76,16 +76,17 @@ INSERT INTO Orders (OrderID, CustomerID, BookID, OrderDate, Quantity, TotalPrice
 -- ### 1. Write a query to display all the authors in the database.
 
 
-SELECT name FROM Authors;
+SELECT * FROM Authors;
 
 -- ### 2. Retrieve the names and emails of all customers who joined after February 1, 2023.
 
 Select name,email from Customers where JoinDate > '2023-02-01';
 
 
+
 -- ### 3. Find all books in the 'Fantasy' genre.
 
-Select title FROM Books where Genre = 'Fantasy';
+SELECT * FROM Books WHERE Genre = 'Fantasy';
 
 -- ### 4. Display the total number of books available in stock.
 
